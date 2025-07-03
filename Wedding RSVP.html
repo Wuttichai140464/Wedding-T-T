@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>งานวิวาห์ วุฒิชัย & วราพร</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the pink and white theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDF0F3; /* Very light pink background */
+            color: #333;
+        }
+        .text-primary-pink {
+            color: #FF69B4; /* Deep pink for accents */
+        }
+        .bg-secondary-pink {
+            background-color: #FFC0CB; /* Light pink for sections */
+        }
+        .bg-hero-image {
+            /* Placeholder for a romantic background image */
+            background-image: url('https://placehold.co/1920x1080/FFD1DC/FF69B4?text=Wedding+Background');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Custom scrollbar for a softer look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDF0F3;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFC0CB;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF69B4;
+        }
+
+        /* Styles for the image modal/popup */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 1rem; /* Rounded corners for the image */
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="antialiased leading-normal">
+
+    <!-- Hero Section: Main invitation display -->
+    <section class="relative h-screen flex items-center justify-center text-center text-white bg-hero-image shadow-lg">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 p-6 md:p-10 lg:p-12 bg-white bg-opacity-20 rounded-3xl backdrop-blur-sm shadow-2xl max-w-4xl mx-4">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg text-primary-pink">
+                งานวิวาห์ของเรา
+            </h1>
+            <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 drop-shadow-lg text-white">
+                วุฒิชัย & วราพร
+            </p>
+            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mb-8 drop-shadow-lg text-white">
+                ขอเรียนเชิญทุกท่านร่วมเป็นเกียรติในวันวิวาห์ของเรา
+            </p>
+            <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg text-primary-pink">
+                22 พฤศจิกายน 2569
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-pink text-center shadow-inner">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-pink mb-10">เรื่องราวของเรา</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="md:w-1/2 text-left bg-white p-8 rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">จุดเริ่มต้น...</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        วุฒิชัยและวราพรพบกันครั้งแรกในงานเลี้ยงสังสรรค์ของเพื่อนร่วมงาน บรรยากาศที่เต็มไปด้วยเสียงหัวเราะและรอยยิ้ม ทำให้ทั้งสองได้มีโอกาสพูดคุยกันอย่างเป็นกันเอง และนั่นคือจุดเริ่มต้นของเรื่องราวความรักที่งดงาม
+                    </p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">ความรักที่เติบโต...</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        จากวันนั้น ความสัมพันธ์ของทั้งคู่ก็ค่อยๆ พัฒนาขึ้นเรื่อยๆ จากเพื่อนร่วมงานกลายเป็นเพื่อนสนิท และในที่สุดก็กลายเป็นคู่รักที่เข้าใจกันและกัน ทั้งสองได้เรียนรู้ที่จะเติมเต็มซึ่งกันและกันในทุกๆ วัน ไม่ว่าจะเป็นความสุข ความทุกข์ หรือแม้กระทั่งความท้าทายต่างๆ ที่ผ่านเข้ามา
+                    </p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">ก้าวต่อไป...</h3>
+                    <p class="text-lg text-gray-700">
+                        วันนี้ วุฒิชัยและวราพรพร้อมแล้วที่จะก้าวเข้าสู่บทบาทใหม่ในชีวิตคู่ และสร้างครอบครัวที่อบอุ่นและมีความสุขร่วมกัน พวกเราขอขอบคุณทุกท่านที่ได้เป็นส่วนหนึ่งในเส้นทางความรักของเรา และหวังเป็นอย่างยิ่งว่าทุกท่านจะมาร่วมเป็นสักขีพยานในวันสำคัญของเราด้วยกัน
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex flex-col gap-6">
+                    <img src="https://placehold.co/600x400/FFD1DC/FF69B4?text=Our+Story+Image+1" alt="Our Story Image 1" class="w-full h-auto rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 object-cover">
+                    <img src="https://placehold.co/600x400/FFD1DC/FF69B4?text=Our+Story+Image+2" alt="Our Story Image 2" class="w-full h-auto rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Album Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white text-center shadow-lg">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-pink mb-10">อัลบั้มภาพ</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Photo 1 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 group cursor-pointer" onclick="openModal('https://placehold.co/800x600/FFD1DC/FF69B4?text=Photo+1+Large')">
+                    <img src="https://placehold.co/600x400/FFD1DC/FF69B4?text=Photo+1" alt="Wedding Photo 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">ช่วงเวลาแห่งความสุข</p>
+                    </div>
+                </div>
+                <!-- Photo 2 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 group cursor-pointer" onclick="openModal('https://placehold.co/800x600/FFD1DC/FF69B4?text=Photo+2+Large')">
+                    <img src="https://placehold.co/600x400/FFD1DC/FF69B4?text=Photo+2" alt="Wedding Photo 2" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">รอยยิ้มของความรัก</p>
+                    </div>
+                </div>
+                <!-- Photo 3 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 group cursor-pointer" onclick="openModal('https://placehold.co/800x600/FFD1DC/FF69B4?text=Photo+3+Large')">
+                    <img src="https://placehold.co/600x400/FFD1DC/FF69B4?text=Photo+3" alt="Wedding Photo 3" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">เส้นทางที่ก้าวเดิน</p>
+                    </div>
+                </div>
+                <!-- Photo 4 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 group cursor-pointer" onclick="openModal('https://placehold.co/800x600/FFD1DC/FF69B4?text=Photo+4+Large')">
+                    <img src="https://placehold.co/600x400/FFD1DC/FF69B4?text=Photo+4" alt="Wedding Photo 4" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">ความทรงจำดีๆ</p>
+                    </div>
+                </div>
+                <!-- Add more photos as needed -->
+                <div class="relative overflow-hidden rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 group cursor-pointer" onclick="openModal('https://placehold.co/800x600/FFD1DC/FF69B4?text=Photo+5+Large')">
+                    <img src="https://placehold.co/600x400/FFD1DC/FF69B4?text=Photo+5" alt="Wedding Photo 5" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">รักนิรันดร์</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 group cursor-pointer" onclick="openModal('https://placehold.co/800x600/FFD1DC/FF69B4?text=Photo+6+Large')">
+                    <img src="https://placehold.co/600x400/FFD1DC/FF69B4?text=Photo+6" alt="Wedding Photo 6" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">วันสำคัญของเรา</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decorative Divider Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-100 via-white to-pink-100 text-center shadow-inner border-t-2 border-b-2 border-pink-200">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold text-primary-pink mb-4">
+                <span class="inline-block px-4 py-2 border-2 border-primary-pink rounded-full">
+                    ❤️
+                </span>
+            </h2>
+            <p class="text-xl text-gray-700 leading-relaxed">
+                ทุกช่วงเวลาที่ผ่านมาคือความทรงจำอันล้ำค่า<br>
+                และทุกก้าวต่อไปคือการเริ่มต้นของบทใหม่ในชีวิตคู่ของเรา
+            </p>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white text-center shadow-lg">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-pink mb-8">เหลือเวลาอีก</h2>
+            <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-8 text-gray-800">
+                <div class="flex flex-col items-center p-4 sm:p-6 bg-secondary-pink rounded-2xl shadow-md">
+                    <span id="days" class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-pink">00</span>
+                    <span class="text-lg sm:text-xl font-medium mt-2">วัน</span>
+                </div>
+                <div class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-pink">:</div>
+                <div class="flex flex-col items-center p-4 sm:p-6 bg-secondary-pink rounded-2xl shadow-md">
+                    <span id="hours" class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-pink">00</span>
+                    <span class="text-lg sm:text-xl font-medium mt-2">ชั่วโมง</span>
+                </div>
+                <div class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-pink">:</div>
+                <div class="flex flex-col items-center p-4 sm:p-6 bg-secondary-pink rounded-2xl shadow-md">
+                    <span id="minutes" class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-pink">00</span>
+                    <span class="text-lg sm:text-xl font-medium mt-2">นาที</span>
+                </div>
+                <div class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-pink">:</div>
+                <div class="flex flex-col items-center p-4 sm:p-6 bg-secondary-pink rounded-2xl shadow-md">
+                    <span id="seconds" class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-pink">00</span>
+                    <span class="text-lg sm:text-xl font-medium mt-2">วินาที</span>
+                </div>
+            </div>
+            <p id="countdown-message" class="mt-8 text-xl sm:text-2xl text-gray-700 font-medium"></p>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-pink text-center shadow-inner">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-pink mb-10">รายละเอียดพิธี</h2>
+
+            <div class="grid grid-cols-1 gap-10">
+                <!-- Ceremony Details Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">พิธีฉลองมงคลสมรส</h3>
+                    <p class="text-lg text-gray-600 mb-2">
+                        <span class="font-bold text-primary-pink">เวลา:</span> 18:00 น. เป็นต้นไป
+                    </p>
+                    <p class="text-lg text-gray-600 mb-2">
+                        <span class="font-bold text-primary-pink">สถานที่:</span> โรงแรมแกรนด์ไฮแอท เอราวัณ กรุงเทพฯ
+                    </p>
+                    <p class="text-lg text-gray-600 mb-4">
+                        <span class="font-bold text-primary-pink">ที่อยู่:</span> 494 ถ. ราชดำริ แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        <span class="font-bold text-primary-pink">การแต่งกาย:</span> ธีมสีชมพูขาว หรือชุดสุภาพ
+                    </p>
+                    <!-- Google Maps embed for the main ceremony -->
+                    <div class="w-full h-64 bg-gray-200 rounded-lg overflow-hidden shadow-md">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.760200877963!2d100.53696587508616!3d13.74232378664975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ed800000001%3A0x6b8d2e8e0d4a9f0!2sGrand%20Hyatt%20Erawan%20Bangkok!5e0!3m2!1sen!2sth!4v1701234567890!5m2!1sen!2sth"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white text-center shadow-lg">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-pink mb-8">ยืนยันการเข้าร่วม</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                กรุณายืนยันการเข้าร่วมภายในวันที่ <span class="font-bold text-primary-pink">15 พฤศจิกายน 2569</span> เพื่อที่เราจะได้จัดเตรียมได้อย่างเหมาะสม
+            </p>
+
+            <!-- IMPORTANT: Update the 'action' attribute with your deployed Google Apps Script Web App URL -->
+            <!-- Example: action="https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec" -->
+            <form id="rsvpForm" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-left text-gray-700 text-lg font-medium mb-2">ชื่อ-นามสกุล:</label>
+                    <input type="text" id="name" name="name" placeholder="ชื่อ-นามสกุล" required
+                           class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-pink focus:border-transparent transition duration-200 ease-in-out shadow-sm">
+                </div>
+                <div>
+                    <label for="guests" class="block text-left text-gray-700 text-lg font-medium mb-2">จำนวนผู้เข้าร่วม:</label>
+                    <select id="guests" name="guests" required
+                            class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-pink focus:border-transparent transition duration-200 ease-in-out shadow-sm">
+                        <option value="1">1 ท่าน</option>
+                        <option value="2">2 ท่าน</option>
+                        <option value="3">3 ท่าน</option>
+                        <option value="4">4 ท่านขึ้นไป</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message" class="block text-left text-gray-700 text-lg font-medium mb-2">ข้อความ/คำอวยพร (ไม่บังคับ):</label>
+                    <textarea id="message" name="message" rows="4" placeholder="เขียนคำอวยพรหรือข้อความถึงบ่าวสาว"
+                              class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-pink focus:border-transparent transition duration-200 ease-in-out shadow-sm"></textarea>
+                </div>
+                <button type="submit"
+                        class="w-full bg-primary-pink text-white py-3 px-6 rounded-xl text-xl font-semibold hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                    ส่งการยืนยัน
+                </button>
+            </form>
+            <!-- Message box for form submission feedback -->
+            <div id="message-box" class="mt-6 p-4 rounded-xl text-center hidden" role="alert"></div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-secondary-pink text-center shadow-inner">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-pink mb-6">ขอบคุณ</h2>
+            <p class="text-xl sm:text-2xl text-gray-700 leading-relaxed">
+                ขอบคุณทุกท่านที่มาร่วมเป็นส่วนหนึ่งในวันสำคัญของเรา<br>
+                ความรักและการสนับสนุนจากทุกท่านมีความหมายกับเรามาก
+            </p>
+            <p class="text-xl sm:text-2xl font-bold text-primary-pink mt-8">
+                ด้วยรัก, วุฒิชัย & วราพร
+            </p>
+        </div>
+    </section>
+
+    <!-- The Modal/Lightbox -->
+    <div id="imageModal" class="modal">
+        <!-- Close Button -->
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Countdown Timer Logic
+        const weddingDate = new Date("November 22, 2026 18:00:00").getTime(); // Set wedding date and time
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            // Calculate time units
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the elements
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            // If the countdown is over, display a message
+            const countdownMessage = document.getElementById("countdown-message");
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = ""; // Clear countdown numbers
+                countdownMessage.textContent = "งานวิวาห์ได้เริ่มต้นขึ้นแล้ว!";
+                countdownMessage.classList.add('text-primary-pink', 'font-bold');
+            } else if (distance > 0 && distance < (1000 * 60 * 60 * 24)) { // Less than 24 hours
+                countdownMessage.textContent = "งานวิวาห์กำลังจะมาถึงในไม่ช้า!";
+            } else {
+                countdownMessage.textContent = "เตรียมพบกับวันสำคัญของเรา!";
+            }
+        }, 1000); // Update every 1 second
+
+
+        // JavaScript for handling form submission to Google Sheets via Apps Script
+        // IMPORTANT: Ensure this URL is your actual deployed Google Apps Script Web App URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxmgiEWDis1XUt07Ha7CVfIElQbHgRC2Se9NjFsWetWzk_82fuMagqkcDSuNqtVleKe/exec';
+        const rsvpForm = document.getElementById('rsvpForm');
+        const messageBox = document.getElementById('message-box');
+
+        rsvpForm.addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            messageBox.className = 'mt-6 p-4 rounded-xl text-center bg-blue-100 text-blue-700 block';
+            messageBox.textContent = 'กำลังส่งข้อมูล...';
+
+            const formData = new FormData(rsvpForm);
+
+            try {
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: formData, // FormData automatically sets Content-Type to multipart/form-data
+                    mode: 'no-cors' // Use 'no-cors' for Google Apps Script to avoid CORS issues on client side
+                });
+
+                // Note: When using 'no-cors' mode, you cannot directly read the response body.
+                // The success/failure needs to be inferred or handled by the Apps Script itself.
+                // For a simple success/failure message, we assume success if no network error.
+                // A more robust solution would involve a CORS-enabled endpoint or a proxy.
+
+                messageBox.className = 'mt-6 p-4 rounded-xl text-center bg-green-100 text-green-700 block';
+                messageBox.textContent = 'ขอบคุณสำหรับการยืนยันการเข้าร่วม! ข้อมูลของคุณถูกบันทึกแล้ว';
+                rsvpForm.reset(); // Clear the form
+
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                messageBox.className = 'mt-6 p-4 rounded-xl text-center bg-red-100 text-red-700 block';
+                messageBox.textContent = 'เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้ง';
+            }
+
+            // Hide message after a few seconds
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Image Modal/Lightbox Logic
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+
+        function openModal(imageSrc) {
+            modal.style.display = "flex"; // Use flex to center content
+            modalImage.src = imageSrc;
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
